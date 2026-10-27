@@ -23,55 +23,63 @@
         }
         header {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: #38bdf8;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+            margin-bottom: 12px;
+            text-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+            letter-spacing: -0.5px;
         }
         p.subtitle {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #94a3b8;
+            font-weight: 300;
         }
         .container {
-            max-width: 800px;
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 16px;
+            max-width: 680px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.75);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            backdrop-filter: blur(12px);
+            padding: 45px 35px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin: 20px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            margin: 30px 0;
         }
         .container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.7;
             color: #cbd5e1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        .btn {
-            display: inline-block;
-            background-color: #38bdf8;
-            color: #0f172a;
-            padding: 12px 30px;
+        .btn-epic {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #0078f2;
+            color: #ffffff;
+            padding: 16px 36px;
+            font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 120, 242, 0.4);
         }
-        .btn:hover {
-            background-color: #0ea5e9;
-            transform: translateY(-2px);
+        .btn-epic:hover {
+            background-color: #0060c4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 120, 242, 0.6);
         }
         footer {
             text-align: center;
             color: #64748b;
             font-size: 0.9rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -83,9 +91,12 @@
     </header>
 
     <div class="container">
-        <p>Bem-vindo ao portal oficial do jogo! Prepare-se para embarcar numa jornada épica onde o conhecimento é a sua maior arma para colecionar monstros e superar desafios.</p>
-        <p>O nosso lançamento e atualizações estão a chegar em breve. Fique atento às novidades nas nossas páginas de desenvolvedor!</p>
-        <a href="#" class="btn">Em Breve na Epic Games Store</a>
+        <p>Embarque numa jornada onde a sabedoria é a sua melhor estratégia. Explore o mundo, enfrente desafios pedagógicos e colecione criaturas incríveis nesta aventura educativa!</p>
+        <p>Visite a nossa página oficial na loja e adicione o jogo à sua lista de desejos para acompanhar as novidades de lançamento.</p>
+        
+        <a href="https://store.epicgames.com/p/mestre-do-conhecimento-67cccc" target="_blank" rel="noopener noreferrer" class="btn-epic">
+            Ver na Epic Games Store
+        </a>
     </div>
 
     <footer>
