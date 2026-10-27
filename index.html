@@ -78,24 +78,11 @@
             box-shadow: 0 6px 20px rgba(0, 120, 242, 0.4);
             width: 100%;
             max-width: 360px;
-            cursor: pointer;
         }
         .btn-epic:hover {
             background-color: #0060c4;
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 120, 242, 0.6);
-        }
-        .btn-web {
-            background: transparent;
-            color: #94a3b8;
-            font-size: 0.95rem;
-            text-decoration: underline;
-            border: none;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        .btn-web:hover {
-            color: #f8fafc;
         }
         .platforms-section {
             border-top: 1px solid rgba(148, 163, 184, 0.2);
@@ -168,11 +155,9 @@
         <p>Embarque numa jornada onde a sabedoria é a sua melhor estratégia. Explore o mundo, enfrente desafios pedagógicos e colecione criaturas incríveis nesta aventura educativa!</p>
         
         <div class="button-group">
-            <button id="epicLauncherBtn" class="btn-epic">
-                Abrir no Epic Games Launcher
-            </button>
-            <a href="https://store.epicgames.com/p/mestre-do-conhecimento-67cccc" target="_blank" rel="noopener noreferrer" class="btn-web">
-                Ver direto no navegador web
+            <!-- Botão direto para a Epic Games Store sem conflitos de pop-up -->
+            <a href="https://store.epicgames.com/p/mestre-do-conhecimento-67cccc" target="_blank" rel="noopener noreferrer" class="btn-epic">
+                Ver na Epic Games Store
             </a>
         </div>
 
@@ -201,29 +186,6 @@
     <footer>
         <p>&copy; 2026 Eien no Sekai. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        document.getElementById('epicLauncherBtn').addEventListener('click', function() {
-            const webUrl = "https://store.epicgames.com/p/mestre-do-conhecimento-67cccc";
-            const launcherUrl = "com.epicgames.app://store/p/mestre-do-conhecimento-67cccc";
-
-            // Cria um iframe oculto para disparar o protocolo personalizado sem corromper a aba atual
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = launcherUrl;
-            document.body.appendChild(iframe);
-
-            // Remove o iframe após o disparo
-            setTimeout(() => {
-                document.body.removeChild(iframe);
-            }, 1000);
-
-            // Se o launcher não abrir, abre o site na web como alternativa após 1.2 segundos
-            setTimeout(function() {
-                window.open(webUrl, '_blank');
-            }, 1200);
-        });
-    </script>
 
 </body>
 </html>
