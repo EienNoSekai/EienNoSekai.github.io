@@ -1,9 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Mestre do Conhecimento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestre do Conhecimento | Site Oficial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-top: 40px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+        p.subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+        .container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+        }
+        .btn:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Mestre do Conhecimento - Site Oficial</h1>
+
+    <header>
+        <h1>Mestre do Conhecimento</h1>
+        <p class="subtitle">Aventure-se, Colecione e Aprenda!</p>
+    </header>
+
+    <div class="container">
+        <p>Bem-vindo ao portal oficial do jogo! Prepare-se para embarcar numa jornada épica onde o conhecimento é a sua maior arma para colecionar monstros e superar desafios.</p>
+        <p>O nosso lançamento e atualizações estão a chegar em breve. Fique atento às novidades nas nossas páginas de desenvolvedor!</p>
+        <a href="#" class="btn">Em Breve na Epic Games Store</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Eien no Sekai. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
