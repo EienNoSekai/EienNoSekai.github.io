@@ -78,6 +78,7 @@
             box-shadow: 0 6px 20px rgba(0, 120, 242, 0.4);
             width: 100%;
             max-width: 360px;
+            cursor: pointer;
         }
         .btn-epic:hover {
             background-color: #0060c4;
@@ -96,7 +97,6 @@
         .btn-web:hover {
             color: #f8fafc;
         }
-        /* Secção de Plataformas */
         .platforms-section {
             border-top: 1px solid rgba(148, 163, 184, 0.2);
             padding-top: 25px;
@@ -168,32 +168,28 @@
         <p>Embarque numa jornada onde a sabedoria é a sua melhor estratégia. Explore o mundo, enfrente desafios pedagógicos e colecione criaturas incríveis nesta aventura educativa!</p>
         
         <div class="button-group">
-            <a href="com.epicgames.app://store/p/mestre-do-conhecimento-67cccc" id="epicLauncherBtn" class="btn-epic">
+            <button id="epicLauncherBtn" class="btn-epic">
                 Abrir no Epic Games Launcher
-            </a>
+            </button>
             <a href="https://store.epicgames.com/p/mestre-do-conhecimento-67cccc" target="_blank" rel="noopener noreferrer" class="btn-web">
                 Ver direto no navegador web
             </a>
         </div>
 
-        <!-- Onde Jogar / Informações de Plataformas -->
         <div class="platforms-section">
             <h2>Disponibilidade & Plataformas</h2>
             
             <div class="platform-grid">
-                <!-- Epic Games -->
                 <div class="platform-card">
                     <h3>PC (Windows) <span class="badge-exclusive">Exclusivo Inicial</span></h3>
                     <p>Lançamento inicial na <strong>Epic Games Store</strong> (Windows).</p>
                 </div>
 
-                <!-- Steam -->
                 <div class="platform-card">
                     <h3>Steam (Windows) <span class="badge-soon">Em Breve</span></h3>
                     <p>Disponível na Steam após a janela de exclusividade inicial.</p>
                 </div>
 
-                <!-- Google Play -->
                 <div class="platform-card">
                     <h3>Android <span class="badge-soon">Em Breve</span></h3>
                     <p>Versão mobile planejada para a <strong>Google Play Store</strong>.</p>
@@ -207,16 +203,25 @@
     </footer>
 
     <script>
-        document.getElementById('epicLauncherBtn').addEventListener('click', function(e) {
-            e.preventDefault();
+        document.getElementById('epicLauncherBtn').addEventListener('click', function() {
             const webUrl = "https://store.epicgames.com/p/mestre-do-conhecimento-67cccc";
-            const launcherUrl = this.href;
+            const launcherUrl = "com.epicgames.app://store/p/mestre-do-conhecimento-67cccc";
 
-            window.location.href = launcherUrl;
+            // Cria um iframe oculto para disparar o protocolo personalizado sem corromper a aba atual
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = launcherUrl;
+            document.body.appendChild(iframe);
 
+            // Remove o iframe após o disparo
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+            }, 1000);
+
+            // Se o launcher não abrir, abre o site na web como alternativa após 1.2 segundos
             setTimeout(function() {
                 window.open(webUrl, '_blank');
-            }, 1500);
+            }, 1200);
         });
     </script>
 
